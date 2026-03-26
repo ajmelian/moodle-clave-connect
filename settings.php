@@ -101,10 +101,7 @@ if ($hassiteconfig) {
 
     // Mensaje HTML configurable para error de acceso por Cl@ve:
     // usuario autenticado externamente, pero no existe en mdl_user.
-    $defaultclaveerrorhtml = '<p>Si no ha podido acceder por ninguno de los sistemas de validación, '
-        . 'póngase en contacto con Formación (Servicio de Inclusión Educativa y Formación del Profesorado).</p>'
-        . '<p>Puede consultar el <a href="https://www.educastur.es/consejeria/institucional/dir-org">'
-        . 'directorio de la Consejería de Educación</a>.</p>';
+    $defaultclaveerrorhtml = '<p>Usuario no autorizado a acceder a esta plataforma.</p>';
 
     $settings->add(new admin_setting_confightmleditor(
         'auth_mcc/custom_error_clave_html',
@@ -116,9 +113,7 @@ if ($hassiteconfig) {
     // Mensaje HTML configurable para errores técnicos de LDAP:
     // - usuario no disponible en el backend LDAP
     // - fallo técnico de conexión o disponibilidad LDAP
-    $defaultldaperrorhtml = '<p>No ha sido posible acceder mediante el sistema LDAP.</p>'
-        . '<p>Si el problema persiste, póngase en contacto con Formación '
-        . '(Servicio de Inclusión Educativa y Formación del Profesorado).</p>';
+    $defaultldaperrorhtml = '<p>Servicio LDAP inoperativo. No es posible comprobar su autorización.</p>';
 
     $settings->add(new admin_setting_confightmleditor(
         'auth_mcc/custom_error_ldap_html',
@@ -128,9 +123,7 @@ if ($hassiteconfig) {
     ));
 
     // Mensaje HTML configurable para credenciales LDAP incorrectas.
-    $defaultpwderrorhtml = '<p>Las credenciales introducidas son erroneas.</p>'
-        . '<p>Si el problema persiste, póngase en contacto con Formación '
-        . '(Servicio de Inclusión Educativa y Formación del Profesorado).</p>';
+    $defaultpwderrorhtml = '<p>Las credenciales introducidas son erroneas.</p>';
 
     $settings->add(new admin_setting_confightmleditor(
         'auth_mcc/custom_error_pwd_html',
